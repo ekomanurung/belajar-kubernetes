@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: nginx-with-annotation
+    labels:
+        team: member
+        version: 1.0.5
+        environment: dev
+    annotations:
+        description: aplikasi dari tim member
+spec:
+    containers:
+        - name: nginx-with-annotation
+          image: nginx
+          ports:
+            - containerPort: 80
